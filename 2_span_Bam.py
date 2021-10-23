@@ -32,7 +32,7 @@ if __name__ == '__main__':
     clientModel.service.begin_modification()
 
     B1 = float(input('Length of the BEAM in m: '))
-    #NS = float(input('location intermediate support in m: '))  # Node 4 
+    NS = float(input('location intermediate support in m: '))  # Node 4 
     PL = float(input('Location of Point Load in m: '))         # Node 3
 
     VL1 = float(input('Varying Load in 1st span start in kN/m: '))  # Varying Load start/End in 1st span kn/m
@@ -62,7 +62,7 @@ if __name__ == '__main__':
     Node(1, 0.0, 0.0, 0.0)
     Node(2, B1, 0.0, 0.0)
     Node(3, PL, 0.0, 0.0)
-    #Node(4, NS, 0.0, 0.0)
+    Node(4, NS, 0.0, 0.0)
 
 
     # Create Member
@@ -71,7 +71,7 @@ if __name__ == '__main__':
     # Create Nodal Supports
     NodalSupport(1, '1', NodalSupportType.HINGED)
     NodalSupport(2, '2', NodalSupportType.ROLLER_IN_X)
-    #NodalSupport(4, '4', NodalSupportType.ROLLER_IN_X)
+    NodalSupport(4, '4', NodalSupportType.ROLLER_IN_X)
     
 
     # Create Static Analysis Settings
