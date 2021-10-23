@@ -29,7 +29,7 @@ if __name__ == '__main__':
     # Modeling of 2 span beam Fixed at both Ends, intermediate support is Roller support 
 
     # Create Beam inputs Span, Load
-    #clientModel.service.begin_modification()
+    clientModel.service.begin_modification()
 
     B = float(input('Length of the BEAM in m: '))
     NS = float(input('location intermediate support in m: '))  # Node 4 
