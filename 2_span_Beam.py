@@ -31,7 +31,7 @@ if __name__ == '__main__':
     # Create Beam inputs Span, Load
     #clientModel.service.begin_modification()
 
-    B1 = float(input('Length of the BEAM in m: '))
+    B = float(input('Length of the BEAM in m: '))
     NS = float(input('location intermediate support in m: '))  # Node 4 
     PL = float(input('Location of Point Load in m: '))         # Node 3
 
@@ -60,7 +60,7 @@ if __name__ == '__main__':
 
     # Create Nodes
     Node(1, 0.0, 0.0, 0.0)
-    Node(2, B1, 0.0, 0.0)
+    Node(2, B, 0.0, 0.0)
     Node(3, PL, 0.0, 0.0)
     Node(4, NS, 0.0, 0.0)
 
